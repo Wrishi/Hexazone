@@ -1,0 +1,44 @@
+﻿<!DOCTYPE htmlW>
+<html>
+
+<head>
+<title>Hexazone</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="playerpanel">
+			<span class="gametitle"></span>
+			<span class="turnnumber" id="turnnumber"></span>
+			<span class="turnplayer" id="turnplayer"></span>
+			<span class="turnsleft" id="turnsleft"></span>
+			<button id="giveup">Give Up</button>
+			<button id="endturn">End Turn</button>
+		</div>
+		<div class="map"></div>
+	</div>	
+	<div class="overlay" id="newturn">
+		<div class="info">New Turn...</div>
+	</div>
+	<div class="overlay" id="changeturn">
+		<div class="info">Ending Turn...</div>
+	</div>
+	<div class="overlay" id="gameover">
+		<div class="info">
+			<div class="smalltext">Winner</div>
+			<div id="winnername"></div>
+			<button id="newgame">New Game</button>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/Hex.js"></script>
+	<script src="js/MapList.js"></script>
+	<script src="js/Map.js"></script>
+	<script src="js/Player.js"></script>
+	<script src="js/GameController.js"></script>
+	<script src="js/Input.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+﻿body{
+	margin:0;
+	padding:0;
+	outline:0;
+	font-size: 0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+body * {
+	outline: 0;
+}
+.wrap{
+	margin: auto;
+	width: 720px;
+	height: 328px;
+	text-align: center;
+}
+.playerpanel{
+	padding: 5px;
+	text-align: center;
+	font-size: 20px;
+}
+.gametitle{
+	float: left;
+	background-image: url('../images/hexazoneAlt.png');
+	background-size: cover;
+	height: 23px;
+  	width: 155px;
+  	margin-left: 20px;
+  	margin-top: 4px;
+}
+button{
+	background-color: #002060;
+	color: #fff;
+	border: 0px;
+	padding: 5px 10px;
+	border-radius: 21px;
+	background: -webkit-linear-gradient(#2F5597, #002060);
+	background: -o-linear-gradient(#2F5597, #002060);
+	background: -moz-linear-gradient(#2F5597, #002060);
+	background: linear-gradient(#2F5597, #002060);
+	margin-left: 5px;
+}
+button:active{
+	background: -webkit-linear-gradient(#002060, #2F5597);
+	background: -o-linear-gradient(#002060, #2F5597);
+	background: -moz-linear-gradient(#002060, #2F5597);
+	background: linear-gradient(#002060, #2F5597);
+}
+.playerpanel button{
+	float: right;
+  	margin-top: 4px;
+}
+
+.turnnumber{
+	font-size: 20px;
+  	background-color: #fff;
+  	color: #ED7D31;
+  	padding: 3px 4px;
+  	border-radius: 20px;
+  	min-width: 21px;
+  	position: relative;
+  	display: inline-block;
+  	text-align: center;
+  	transition: 0.5s;
+  	box-shadow: inset 0px 0px 12px #ED7D31;
+  	margin-right: 4px;
+  	font-weight: bold;
+  	text-shadow: 0px 0px 20px #ED7D31;
+}
+.turnplayer{
+	color: #F4B183;
+	transition: 0.5s;
+	text-shadow: 1px 2px 3px #C55A11;
+  	font-size: 32px;
+  	position: relative;
+  	top: 3px;
+	line-height: 17px;
+}
+.turnsleft{
+	vertical-align: sub;
+	font-size: 16px;
+	color: #6e6e6e;
+}
+.map{
+	font-size: 12px;
+}
+.map .row{
+	margin-top: -8px;
+}
+.map .row:first-child{
+	margin-top: 0px;
+}
+.map .row:nth-child(even){
+	margin-left: 38px;
+}
+.hexagon{
+	display: inline-block;
+	margin-left: 3px;
+}
+.hexagon .hextrunk{
+	background: #70AD47;
+	height: 20px;
+	width: 34.64px;
+}
+.hexagon .hexcap{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 17.32px 10px 17.32px;
+	border-color: transparent transparent #70AD47 transparent;
+}
+.hexagon .hexbase{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 17.32px 0 17.32px;
+	border-color: #70AD47 transparent transparent transparent;
+}
+
+.hexagon.water .hextrunk{
+	background-color: #5B9BD5;
+}
+.hexagon.water .hexcap{
+	border-color: transparent transparent #5B9BD5 transparent;
+}
+.hexagon.water .hexbase {
+	border-color: #5B9BD5 transparent transparent transparent;
+}
+
+.hexagon.city .hextrunk {
+	background-color: #FFC000;
+}
+.hexagon.city .hexcap{
+	border-color: transparent transparent #FFC000 transparent;
+}
+.hexagon.city .hexbase {
+	border-color: #FFC000 transparent transparent transparent;
+}
+
+.hexagon.dock .hextrunk{
+	background-color: #843C0C;
+}
+.hexagon.dock .hexcap{
+	border-color: transparent transparent #843C0C transparent;
+}
+.hexagon.dock .hexbase {
+	border-color: #843C0C transparent transparent transparent;
+}
+
+.hexagon.capital .hextrunk{
+	background-color: #C00000;
+}
+.hexagon.capital .hexcap{
+	border-color: transparent transparent #C00000 transparent;
+}
+.hexagon.capital .hexbase {
+	border-color: #C00000 transparent transparent transparent;
+}
+
+.hexagon.ground[data-owner="0"] .hextrunk{
+	background-color: #C5E0B4;
+}
+.hexagon.ground[data-owner="0"] .hexcap{
+	border-color: transparent transparent #C5E0B4 transparent;
+}
+.hexagon.ground[data-owner="0"] .hexbase {
+	border-color: #C5E0B4 transparent transparent transparent;
+}
+
+.hexagon.ground[data-owner="1"] .hextrunk{
+	background-color: #385723;
+}
+.hexagon.ground[data-owner="1"] .hexcap{
+	border-color: transparent transparent #385723 transparent;
+}
+.hexagon.ground[data-owner="1"] .hexbase {
+	border-color: #385723 transparent transparent transparent;
+}
+
+.hexagon .numbercircle{
+	position:absolute;
+	opacity:0;
+	height: 0px;
+	width: 0px;
+	border-radius: 22px;
+	margin: -23px 15px;
+	font-size: 0;
+	transition: 0.5s;
+}
+.hexagon .numbercircle.active{
+	opacity: 1;
+	height: 22px;
+	width: 22px;
+	margin: -33px 4px;
+	border: 2px solid;
+	line-height: 22px;
+	font-size: 12px;
+}
+
+/*.hexagon .numbercircle.dice-FFF{
+	background-color: #fff;
+	color: #000;
+}
+
+.hexagon .numbercircle.dice-000{
+	background-color: #000;
+	color: #fff;
+}*/
+.hexagon[data-owner="0"] .numbercircle{
+	background-color: #fff;
+	color: #000;
+	border-color: #000;
+}
+
+.hexagon[data-owner="1"] .numbercircle{
+	background-color: #000;
+	color: #fff;
+	border-color: #fff;
+}
+
+.hexagon.highlight{
+	opacity: 0.6;
+}
+
+.overlay{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255,255,255,0.6);
+	text-align: center;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+
+.info{
+	position: relative;
+	/* height: 100px; */
+	width: 100px;
+	margin-top: 8%;
+	font-size: 30px;
+	display: inline-block;
+	width: 200px;
+	padding: 30px;
+	background-color: #fff;
+	border-radius: 10px;
+	color: #F4B183;
+	box-shadow: 1px 2px 3px #6e6e6e;
+	text-shadow: 1px 2px 3px #C55A11;
+}
+
+.info .smalltext{
+	font-size: 20px;
+}
+
+.info button{
+	margin-top: 15px;
+	font-size: 20px;
+	padding: 10px 20px;
+}
